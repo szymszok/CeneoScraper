@@ -12,7 +12,7 @@
 ## struktura opinii w serwisie Ceneo.pl
 |składowa|zmienna|selektor|
 |--------|-------|--------|
-|opinia|review|js_product-review|
+|opinia|review|div.js_product-review:not(.user-post--highlight)|
 |identyfikator opinii|review_id|['data-entry-id']|
 |autor|author|span.user-post__author-name|
 |rekomendację|recomendation|span.user-post__author-recomendation > em|
@@ -23,6 +23,6 @@
 |ile osób uznało opinię za przydatną|likes|button.vote-yes > span|
 |ile osób uznało opinię za nieprzydatną|dislikes|button.vote-no > span|
 |data wystawienia opinii|publish_date|span.user-post__published > time:nth-child(1)['datetime']|
-|data zakupu produktu|buy_date|user-post__published > time:nth-child(2)['datetime']|
+|data zakupu produktu|purchase_date|span.user-post__published > time:nth-child(2)['datetime']|
 |czy opinia jest potwierdzona zakupem||.review-pz|
 
